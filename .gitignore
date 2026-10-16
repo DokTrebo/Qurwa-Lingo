@@ -1,0 +1,14 @@
+# DB
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+
+# Konfigurace
+.env
+*.local.php
+
+# Systemove soubory
+.DS_Store
+Thumbs.db
+.vscode/
