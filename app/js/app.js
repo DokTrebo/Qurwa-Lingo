@@ -1,6 +1,3 @@
-/**
- * QurwaLingo - Řízení uživatelského rozhraní (UI controller)
- */
 document.addEventListener('DOMContentLoaded', () => {
     // Odkazy na DOM elementy z index.html
     const els = {
