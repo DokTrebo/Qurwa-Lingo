@@ -1,0 +1,68 @@
+-- Vložení jazyků
+INSERT INTO languages (code, name) VALUES 
+('cs', 'Čeština'),
+('sk', 'Slovenčina'),
+('en', 'English');
+
+-- Vložení tagů (prostředí)
+INSERT INTO tags (name) VALUES 
+('hospoda'),
+('ulice'),
+('kancelář');
+
+-- Vložení testovacích uživatelů (admin a běžný student)
+INSERT INTO users (username, password_hash, role, total_xp, streak_days, lives) VALUES 
+('admin', '$2y$10$testhashadmin123456789', 'admin', 0, 0, 5),
+('matej', '$2y$10$testhashuser1234567890', 'user', 120, 3, 4);
+
+INSERT INTO courses (source_lang_id, target_lang_id, title, data_version, is_published) VALUES 
+(1, 2, 'Rukoväť kľatia pre bratov spoza Moravy', 1, 1);
+
+INSERT INTO courses (source_lang_id, target_lang_id, title, data_version, is_published) VALUES 
+(1, 2, 'Rukoväť kľatia pre bratov spoza Moravy', 1, 1);
+
+INSERT INTO lessons (id, course_id, title, order_index, description) VALUES 
+(1, 1, 'Lekce 1: Sloveso „Jebať“', 1, 'Švýcarský nožík jazyka'),
+(2, 1, 'Lekce 2: Adresování lidí', 2, 'Kdo je kdo');
+
+-- ============================================================================
+-- 5. Výrazy pro LEKCI 1: Sloveso „Jebať“
+-- ============================================================================
+INSERT INTO terms (id, lesson_id, original_text, translated_text, context_sentence, context_hidden, emotion_level, audio_file) VALUES 
+(1, 1, 'Jebem na to', 'Kašlu na to / Mám to na háku', 'Už ma to vôbec nebaví, jebem na to.', 'jebem na to', 3, 'assets/audio/sk/jebem_na_to.mp3'),
+(2, 1, 'Mňa jebne!', 'To si děláš prdel!', 'Vyhral si v lotérii? Mňa jebne!', 'Mňa jebne', 4, 'assets/audio/sk/mna_jebne.mp3'),
+(3, 1, 'Ti jebe?', 'Hrabe ti?', 'Chceš ísť von v tomto daždi? Ti jebe?', 'Ti jebe', 3, 'assets/audio/sk/ti_jebe.mp3'),
+(4, 1, 'Jebol som sa', 'Spadnul jsem / praštil jsem se', 'Šmykol som sa na schodoch a hrozne som sa jebol.', 'som sa jebol', 2, 'assets/audio/sk/jebol_som_sa.mp3'),
+(5, 1, 'Jebni to tam', 'Polož to tam / hoď to tam', 'Neukladaj to presne, proste to tam jebni.', 'jebni', 2, 'assets/audio/sk/jebni_to_tam.mp3'),
+(6, 1, 'Jeblo mu', 'Zbláznil se / ruplo mu v bedně', 'Začal kričať po šéfovi, načisto mu jeblo.', 'jeblo', 3, 'assets/audio/sk/jeblo_mu.mp3'),
+(7, 1, 'Odjebalo ma', 'To mě rozsekalo / šokovalo', 'Keď som videl ten účet za elektrinu, normálne ma odjebalo.', 'odjebalo', 3, 'assets/audio/sk/odjebalo_ma.mp3'),
+(8, 1, 'Zajebať', 'Zahlásit / říct něco trefného', 'Ten zase v krčme zajebal takú hlášku, že sme plakali od smiechu.', 'zajebal', 2, 'assets/audio/sk/zajebat.mp3');
+
+-- ============================================================================
+-- 6. Výrazy pro LEKCI 2: Adresovanie ľudí
+-- ============================================================================
+INSERT INTO terms (id, lesson_id, original_text, translated_text, context_sentence, context_hidden, emotion_level, audio_file) VALUES 
+(9, 2, 'Kokot', 'Vole / kámo / idiot (univerzální oslovení)', 'Počúvaj, ty kokot, kde si včera toľko trčal?', 'kokot', 5, 'assets/audio/sk/kokot.mp3'),
+(10, 2, 'Chuj', 'Nekompetentní blb / otrava', 'Je to obyčajný chuj, vôbec ho nerieš.', 'chuj', 3, 'assets/audio/sk/chuj.mp3'),
+(11, 2, 'Pičus', 'Zákeřný, nesympatický člověk', 'Never mu ani pol slova, je to riadny pičus.', 'pičus', 4, 'assets/audio/sk/picus.mp3'),
+(12, 2, 'Drbnutý', 'Praštěný / švihlý', 'Si drbnutý? Prečo si ten čaj vylial na gauč?', 'drbnutý', 2, 'assets/audio/sk/drbnuty.mp3');
+
+-- ============================================================================
+-- 7. Přiřazení tagů (term_tags: 1 = krčma, 2 = ulica, 3 = kancelária)
+-- ============================================================================
+INSERT INTO term_tags (term_id, tag_id) VALUES 
+-- Lekce 1
+(1, 1), (1, 2),        -- Jebem na to -> krčma, ulica
+(2, 1), (2, 2),        -- To mi jebe! -> krčma, ulica
+(3, 1), (3, 2),        -- Ti jebe? -> krčma, ulica
+(4, 2),                -- Jebol som sa -> ulica
+(5, 1), (5, 2), (5, 3),-- Jebni to tam -> krčma, ulica, kancelária
+(6, 2), (6, 3),        -- Jeblo mu -> ulica, kancelária
+(7, 1), (7, 2),        -- Odjebalo ma -> krčma, ulica
+(8, 1), (8, 2),        -- Zajebať -> krčma, ulica
+
+-- Lekce 2
+(9, 1), (9, 2),        -- Kokot -> krčma, ulica
+(10, 1), (10, 2), (10, 3), -- Chuj -> krčma, ulica, kancelária
+(11, 2), (11, 3),      -- Pičus -> ulica, kancelária
+(12, 1), (12, 2);      -- Drbnutý -> krčma, ulica

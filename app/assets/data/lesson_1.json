@@ -1,0 +1,78 @@
+{
+  "lesson_id": 1,
+  "lesson_title": "Lekce 1: Sloveso „Jebať“",
+  "terms": [
+    {
+      "id": 1,
+      "sk": "Jebem na to",
+      "cz": "Kašlu na to / Mám to na háku",
+      "context": "Už ma to vôbec nebaví, jebem na to.",
+      "hidden": "jebem na to",
+      "level": 3,
+      "audio": "assets/audio/sk/jebem_na_to.mp3"
+    },
+    {
+      "id": 2,
+      "sk": "Mňa jebne!",
+      "cz": "To si děláš prdel!",
+      "context": "Vyhral si v lotérii? Mňa jebne!",
+      "hidden": "Mňa jebne",
+      "level": 4,
+      "audio": "assets/audio/sk/mna_jebne.mp3"
+    },
+    {
+      "id": 3,
+      "sk": "Ti jebe?",
+      "cz": "Hrabe ti?",
+      "context": "Chceš ísť von v tomto daždi? Ti jebe?",
+      "hidden": "Ti jebe",
+      "level": 3,
+      "audio": "assets/audio/sk/ti_jebe.mp3"
+    },
+    {
+      "id": 4,
+      "sk": "Jebol som sa",
+      "cz": "Spadnul jsem / praštil jsem se",
+      "context": "Šmykol som sa na schodoch a hrozne som sa jebol.",
+      "hidden": "som sa jebol",
+      "level": 2,
+      "audio": "assets/audio/sk/jebol_som_sa.mp3"
+    },
+    {
+      "id": 5,
+      "sk": "Jebni to tam",
+      "cz": "Polož to tam / hoď to tam",
+      "context": "Neukladaj to presne, proste to tam jebni.",
+      "hidden": "jebni",
+      "level": 2,
+      "audio": "assets/audio/sk/jebni_to_tam.mp3"
+    },
+    {
+      "id": 6,
+      "sk": "Jeblo mu",
+      "cz": "Zbláznil se / ruplo mu v bedně",
+      "context": "Začal kričať po šéfovi, načisto mu jeblo.",
+      "hidden": "jeblo",
+      "level": 3,
+      "audio": "assets/audio/sk/jeblo_mu.mp3"
+    },
+    {
+      "id": 7,
+      "sk": "Odjebalo ma",
+      "cz": "To mě rozsekalo / šokovalo",
+      "context": "Keď som videl ten účet za elektrinu, normálne ma odjebalo.",
+      "hidden": "odjebalo",
+      "level": 3,
+      "audio": "assets/audio/sk/odjebalo_ma.mp3"
+    },
+    {
+      "id": 8,
+      "sk": "Zajebať",
+      "cz": "Zahlásit / říct něco trefného",
+      "context": "Ten zase v krčme zajebal takú hlášku, že sme plakali od smiechu.",
+      "hidden": "zajebal",
+      "level": 2,
+      "audio": "assets/audio/sk/zajebat.mp3"
+    }
+  ]
+}
